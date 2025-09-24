@@ -9,10 +9,13 @@ public class PlayerMovement : MonoBehaviour
     public float rotationSpeed;
     private Vector2 movementValue;
     private float lookValue;
+
+    private Rigidbody rb;
     private void Awake()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        rb = GetComponent<Rigidbody>();
     }
     public void OnMove(InputValue value) {
         movementValue = value.Get<Vector2>() * speed;
@@ -43,10 +46,16 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
             transform.Translate(speed * Time.deltaTime,0,0);
         } */
-        transform.Translate(
+
+        /* transform.Translate(
             movementValue.x * Time.deltaTime,
             0,
             movementValue.y * Time.deltaTime);
-        transform.Rotate(0,lookValue * Time.deltaTime, 0);
+        transform.Rotate(0,lookValue * Time.deltaTime, 0); */
+        rb.AddRelativeForce(
+            movementValue.x * Time.deltaTime,
+            0,
+            movementValue.y * Time.deltaTime);
+        rb.AddRelativeTorque(0, lookValue * Time.deltaTime, 0);
     }
 }

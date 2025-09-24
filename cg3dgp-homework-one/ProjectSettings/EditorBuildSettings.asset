@@ -5,7 +5,17 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/chapterEightLoseScene.unity
+    guid: 8668b3396f2f7cb49a9c582ad8bd5c89
+  - enabled: 1
+    path: Assets/Scenes/chapterEightWinLossConditions_.unity
+    guid: c4686de45e09b0240bfd8edc682beea2
+  - enabled: 1
+    path: Assets/Scenes/chapterEightWinScene.unity
+    guid: 33b1b448da4efd14485c5639abb59f8c
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
