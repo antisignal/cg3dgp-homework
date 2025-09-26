@@ -27,7 +27,7 @@ public class ChapterEightWavesGameMode : MonoBehaviour
     }
 
     // Update is called once per frame
-    void CheckWinCondition()
+    public void CheckWinCondition()
     {
         if (ChapterEightEnemiesManager.instance.enemies.Count <= 0 &&
         ChapterEightWavesManager.instance.waves.Count <= 0)
